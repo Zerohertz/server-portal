@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: portal-container
-    image: zerohertzkr/server-portal:
+    image: zerohertzkr/server-portal:v1.0
     ports:
     - containerPort: 3000
 ---
