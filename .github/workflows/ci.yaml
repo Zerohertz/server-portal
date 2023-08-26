@@ -35,7 +35,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: zerohertzkr/server-portal:${{ env.TAG }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/server-portal:${{ env.TAG }}
 
   push:
     name: Push Manifest
