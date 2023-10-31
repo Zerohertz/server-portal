@@ -46,4 +46,9 @@ export const APP_LIST: AppInterface[] = [
     href: "https://cloud.zerohertz.xyz",
     imageSrc: "/images/nextcloud.png",
   },
+  {
+    name: "Jenkins",
+    href: "https://jenkins.zerohertz.xyz",
+    imageSrc: "/images/jenkins.png",
+  },
 ];

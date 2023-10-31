@@ -3,11 +3,9 @@ FROM node:18 as builder
 
 WORKDIR /app
 
-COPY package.json ./
+COPY . ./
 RUN yarn install
 RUN yarn add sharp
-
-COPY . ./
 
 RUN yarn run build
 
