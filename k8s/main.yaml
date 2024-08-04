@@ -1,16 +1,25 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: portal-pod
+  name: portal-deployment
   namespace: portal
   labels:
     app: portal
 spec:
-  containers:
-    - name: portal-container
-      image: zerohertzkr/server-portal:v1.3.0
-      ports:
-        - containerPort: 3000
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portal
+  template:
+    metadata:
+      labels:
+        app: portal
+    spec:
+      containers:
+        - name: portal-container
+          image: zerohertzkr/server-portal:v1.3.0
+          ports:
+            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +33,7 @@ spec:
     - protocol: TCP
       port: 3000
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: portal
