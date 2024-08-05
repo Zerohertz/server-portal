@@ -16,11 +16,11 @@ export const APP_LIST: AppInterface[] = [
     href: "https://traefik.zerohertz.xyz",
     imageSrc: "/images/traefik.png",
   },
-  {
-    name: "Kubernetes",
-    href: "https://k8s.zerohertz.xyz",
-    imageSrc: "/images/k8s.png",
-  },
+  // {
+  //   name: "Kubernetes",
+  //   href: "https://k8s.zerohertz.xyz",
+  //   imageSrc: "/images/k8s.png",
+  // },
   {
     name: "Prometheus",
     href: "https://prometheus.zerohertz.xyz",
