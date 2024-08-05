@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: portal-container
-          image: zerohertzkr/server-portal:v1.3.0
+          image: zerohertzkr/server-portal:v1.4.0
           ports:
             - containerPort: 3000
 ---
